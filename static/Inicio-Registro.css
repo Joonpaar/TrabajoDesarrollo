@@ -1,0 +1,74 @@
+/* Agrega estilos adicionales según tus preferencias */
+
+body {
+    margin-top: 10%;
+    background-image: url('fondoUsuarios.jpg');
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-attachment: fixed; /* Fija la imagen de fondo al desplazarse */
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.form-signin .btn {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Ajustes adicionales para mejorar la apariencia */
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2em; /* Tamaño del título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave del texto */
+    font-family: 'Cursive', sans-serif; /* Cambia la fuente a una fuente cursiva */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    font-weight: bold; /* Hace el texto más audaz */
+}
+
+
+label {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos específicos para la página de registro */
+body.register-page {
+    background-color: #f8f9fa;
+}
+
+.form-signin.register-form {
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-signin.register-form .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-signin.register-form .btn {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Ajustes adicionales para mejorar la apariencia */
+h1 {
+    color: #28a745;
+}

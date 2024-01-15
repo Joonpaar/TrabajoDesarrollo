@@ -1,0 +1,83 @@
+/* Estilos.css */
+
+body {
+    background-image: url('fondo.jpg'); /* Agrega la imagen de fondo */
+    background-attachment: fixed; /* Fija la imagen de fondo al desplazarse */
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+label{
+    color: white;
+}
+/* Estilo para el contenedor principal */
+.container {
+    margin-top: 10px;
+}
+
+/* Título de bienvenida */
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2em; /* Tamaño del título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave del texto */
+    font-family: 'Cursive', sans-serif; /* Cambia la fuente a una fuente cursiva */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    font-weight: bold; /* Hace el texto más audaz */
+}
+
+/* Formulario de filtrado */
+#filtroForm {
+    margin-bottom: 3%;
+}
+
+/* Estilo para el botón de filtrar */
+.btn-primary {
+    background-color: #007bff; /* Color principal del botón */
+    border-color: #007bff;
+}
+
+/* Alineación de opciones de filtrado y botón a la derecha */
+#filtroForm select,
+#filtroForm button {
+    width: auto;
+    display: inline-block;
+}
+
+/* Estilo para el contenedor de juegos */
+#contenedor-juegos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Estilo para cada juego */
+.juego {
+    width: 18%;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    background-color: #f8f9fa;
+}
+
+/* Estilo para la imagen del juego */
+.juego img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    border-radius: 8px 8px 0 0; /* Bordes redondeados solo arriba */
+}
+
+/* Estilos para los detalles del juego */
+.juego div {
+    padding: 10px;
+}
+
+/* Efecto de escala al pasar el ratón sobre el juego */
+.juego:hover {
+    transform: scale(1.05);
+    background-color: #e9ecef;
+}

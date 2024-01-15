@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Inicio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Inicio.css') }}">
+    <script src="{{ url_for('static', filename='Inicio.js') }}" defer></script>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1>BIENVENIDO A GAME HEAVEN</h1>
+
+        <script>
+            // Función para mostrar una alerta
+            function mostrarAlerta(mensaje) {
+                alert(mensaje);
+            }
+        </script>
+
+        {% if welcome_message %}
+        <!-- Llama a la función para mostrar la alerta -->
+        <script>
+            mostrarAlerta("{{ welcome_message }}");
+        </script>
+        {% endif %}
+
+        <!-- Botón de cerrar sesión -->
+        <div class="text-right">
+            <button onclick="cerrarSesion()" class="btn btn-danger">Cerrar sesión</button>
+        </div>
+
+        <!-- Formulario de filtrado -->
+        <form id="filtroForm">
+            <div class="form-group">
+                <label for="plataforma">Filtrar por plataforma:</label>
+                <select class="form-control" id="plataforma" name="plataforma">
+                    <option value="all">Todas</option>
+                    <option value="pc">PC</option>
+                    <option value="browser">Navegador</option>
+                    <!-- Agrega más opciones según tus necesidades -->
+                </select>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="verJuegos()">Filtrar</button>
+        </form>
+
+        <!-- Contenedor de juegos -->
+        <div class="row" id="contenedor-juegos">
+            <!-- Los elementos se agregarán aquí dinámicamente -->
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='Inicio.js') }}" defer></script>
+</body>
+
+</html>

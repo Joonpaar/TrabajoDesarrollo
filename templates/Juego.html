@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Juego</title>
+    <!-- Incluye Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Juego.css') }}">
+    <script src="{{ url_for('static', filename='Juego.js') }}" defer></script>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h1 class="mb-4 text-center">DETALLES DEL JUEGO</h1>
+        <div id="info-juego" class="card">
+            <img src="" alt="" class="card-img-top" id="juego-imagen">
+            <div class="card-body">
+                <h2 class="card-title" id="juego-titulo"></h2>
+                <p class="card-text"><strong>Género:</strong> <span id="juego-genero"></span></p>
+                <p class="card-text"><strong>Plataforma:</strong> <span id="juego-plataforma"></span></p>
+                <p class="card-text" id="juego-descripcion"></p>
+
+                <!-- Formulario para agregar opiniones -->
+                <form id="opinion-form">
+                    <div class="mb-3">
+                        <label for="comentario" class="form-label">Opinión:</label>
+                        <textarea class="form-control" id="comentario" name="comentario" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Opinión</button>
+                </form>
+
+                <!-- Agrega el botón de traducción específico para la descripción del juego -->
+                <div id="google_translate_element"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Agrega el script de Google Translate Embed -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'es', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Incluye Bootstrap JS y Popper.js (necesarios para algunos componentes de Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
